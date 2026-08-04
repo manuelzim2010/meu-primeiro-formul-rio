@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria - Pedido de Pizza de Calabresa</title>
+</head>
+<body>
+
+    <h1>Faça seu Pedido — Pizza de Calabresa </h1>
+    <p>Preencha os campos abaixo para receber sua pizza bem quentinha em casa!</p>
+
+    <form action="https://webhook.site/cfb4af50-c74d-4684-9b8e-6e9f3f594d4f" method="post">
+
+        <fieldset>
+            <legend>Dados de Entrega</legend>
+
+            <p>
+                <label for="nome-cliente">Seu Nome:</label><br>
+                <input type="text" id="nome-cliente" name="nome-cliente" required maxlength="60">
+            </p>
+
+            <p>
+                <label for="telefone">Telefone / WhatsApp:</label><br>
+                <input type="tel" id="telefone" name="telefone" required placeholder="(11) 99999-9999">
+            </p>
+
+            <p>
+                <label for="endereco">Endereço Completo:</label><br>
+                <textarea id="endereco" name="endereco" rows="3" cols="40" required placeholder="Rua, número, bairro e ponto de referência"></textarea>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Detalhes da Pizza</legend>
+
+            <p>
+                <label>Tamanho da Pizza:</label><br>
+                <label><input type="radio" name="tamanho" value="pequena" required> Pequena</label><br>
+                <label><input type="radio" name="tamanho" value="media"> Média</label><br>
+                <label><input type="radio" name="tamanho" value="grande"> Grande</label><br>
+                <label><input type="radio" name="tamanho" value="familia"> Tamanho Família</label>
+            </p>
+
+            <p>
+                <label for="quantidade">Quantidade de Pizzas:</label><br>
+                <input type="number" id="quantidade" name="quantidade" min="1" max="10" value="1" required>
+            </p>
+
+            <p>
+                <label for="bebida">Acompanhamento (Bebida):</label><br>
+                <select id="bebida" name="bebida" required>
+                    <option value="">-- Escolha uma bebida --</option>
+                    <option value="sem-bebida">Sem bebida</option>
+                    <option value="coca-2l">Coca-Cola 2L</option>
+                    <option value="guarana-2l">Guaraná Antarctica 2L</option>
+                    <option value="suco-laranja">Suco de Laranja 1L</option>
+                </select>
+            </p>
+
+            <p>
+                <label>Opcionais (Marque o que desejar):</label><br>
+                <label><input type="checkbox" name="opcionais" value="borda-recheada"> Borda recheada de catupiry</label><br>
+                <label><input type="checkbox" name="opcionais" value="extra-queijo"> Queijo mussarela extra</label><br>
+                <label><input type="checkbox" name="opcionais" value="sem-cebola"> Tirar a cebola</label>
+            </p>
+        </fieldset>
+
+        <br>
+        <input type="submit" value="Enviar Pedido de Pizza">
+
+    </form>
+
+</body>
+</html>
